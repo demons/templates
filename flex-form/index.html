@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Flex form</title>
+</head>
+<style>
+	body {
+		font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+		background: #3aafab;
+		color: #fff;
+		padding: 50px 0;
+	}
+
+	.container {
+		width: 80%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.container * {
+		box-sizing: border-box;
+	}
+
+	form {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	form .form-item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	form .form-item > label {
+		flex: 1 0 120px;
+		max-width: 220px;
+	}
+	form .form-item > label + * {
+		flex: 1 0 220px;
+	}
+	form .form-item button {
+		margin-left: auto;
+		padding: 8px 16px;
+		border: none;
+		background: #333;
+		color: #f2f2f2;
+		text-transform: uppercase;
+		letter-spacing: .09em;
+		border-radius: 2px;
+	}
+
+</style>
+<body>
+	<div class="container">
+		<form>
+			<div class="form-item">
+				<label for="firstName">First Name</label>
+				<input type="text" name="firstName">
+			</div>
+			<div class="form-item">
+				<label for="lastName">Last Name</label>
+				<input type="text" name="lastName">
+			</div>
+			<div class="form-item">
+				<label for="email">Email</label>
+				<input type="email" name="email">
+			</div>
+			<div class="form-item">
+				<label for="phone">Phone</label>
+				<input type="text" name="phone">
+			</div>
+			<div class="form-item">
+				<label for="message">Message</label>
+				<textarea rows="6" name="message"></textarea>
+			</div>
+			<div class="form-item">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

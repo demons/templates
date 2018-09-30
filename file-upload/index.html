@@ -35,6 +35,35 @@ form .form-item > label + * {
 	border: 1px solid #ddd;
 	border-radius: 2px;
 }
+.file-upload .btn-close {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 2px;
+	top: 2px;
+	border: 1px solid #888;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1;
+	font-size: 14px;
+	color: #ccc;
+	z-index: 1;
+}
+.btn-close:before, .btn-close:after {
+	position: absolute;
+	top: 2px;
+	left: 7px;
+	content: ' ';
+	height: 10px;
+	width: 2px;
+	background-color: #888;
+}
+.btn-close:before {
+	transform: rotate(45deg);
+}
+.btn-close:after {
+	transform: rotate(-45deg);
+}
 .file-upload label {
 	position: absolute;
 	left: 0;
@@ -68,6 +97,7 @@ form .form-item > label + * {
 			<label for="photo">Photo</label>
 			<div class="file-upload-container">
 			<div class="file-upload">
+				<div class="btn-close"></div>
 				<label class="default">
 					<input type="file" accept="image/*" onchange="handleFiles(this)">
 				</label>
